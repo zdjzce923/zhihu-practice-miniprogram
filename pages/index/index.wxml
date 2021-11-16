@@ -1,10 +1,23 @@
-<scroll-view scroll-y="true" class="container" bindscrolltoupper="uppper" upper-threshold="10" lower-threshold="5"
+<scroll-view scroll-y="true" class="container" enable-flex="true" bindscrolltoupper="uppper" upper-threshold="10" lower-threshold="5"
     bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-    <view class="search flex-wrap">
-        <image src="../../images/search.png"></image>
-        <input placeholder="搜索话题, 问题或人" placeholder-class="search-placeholder" />
+    <view class="search flex-wrp">
+        <view class="search-left flex-item">
+            <image src="../../images/search.png"></image>
+            <input placeholder="搜索话题, 问题或人" placeholder-class="search-placeholder" />
+        </view>
+        <view class="search-right flex-item">
+            <image src="../../images/lighting.png"></image>
+        </view>
     </view>
-    <view class="search-right flex-item" bindtap="upper">
-        <image src="../../images/lighting.png"></image>
-    </view>
+
+    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item">
+        <view class="feed-source">
+            <a class="">
+                <view class="avatar">
+                    <image src="{{item.feed_source_img}}"></image>
+                </view>
+                <text>{{item.feed_source_name}}{{item.feed_source_txt}}</text>
+            </a>
+        </view>
+    </block>
 </scroll-view>
