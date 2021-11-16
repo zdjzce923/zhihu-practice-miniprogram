@@ -1,5 +1,10 @@
 {
-  "pages": ["pages/index/index", "pages/discovery/discovery"],
+  "pages": [
+    "pages/index/index",
+    "pages/discovery/discovery",
+    "pages/answer/answer",
+    "pages/question/question"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#0068C4",

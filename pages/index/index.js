@@ -8,12 +8,12 @@ Page({
     },
     bindQueTap(){
         wx.navigateTo({
-            url:'../question/question.js'    
+            url:'../question/question'    
         })
     },
     bindItemTap(){
         wx.navigateTo({
-            url:'../answer/answer.js'    
+            url:'../answer/answer'    
         })
     },
     upper() {
