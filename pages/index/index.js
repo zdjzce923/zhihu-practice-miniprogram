@@ -6,6 +6,16 @@ Page({
         feed: [],
         feed_length: 0
     },
+    bindQueTap(){
+        wx.navigateTo({
+            url:'../question/question.js'    
+        })
+    },
+    bindItemTap(){
+        wx.navigateTo({
+            url:'../answer/answer.js'    
+        })
+    },
     upper() {
         wx.showNavigationBarLoading()
         this.refresh();
@@ -20,7 +30,7 @@ Page({
         setTimeout(() => {
             wx.hideNavigationBarLoading()
             this.nextLoad()
-        }, 1000)
+        },500)
         console.log("lower")
     },
     nextLoad(){
@@ -38,7 +48,7 @@ Page({
             wx.showToast({
                 title:'加载成功',
                 icon:'success',
-                duration: 1500
+                duration: 1000
             })
         },1000)
     },
