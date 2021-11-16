@@ -1,0 +1,7 @@
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="uppper" upper-threshold="10" lower-threshold="5"
+    bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class="search flex-wrap">
+        <image src="../../images/search.png"></image>
+        <input placeholder="搜索话题, 问题或人" placeholder-class="search-placeholder" />
+    </view>
+</scroll-view>
